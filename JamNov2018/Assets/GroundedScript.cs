@@ -17,14 +17,14 @@ public class GroundedScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
-		if (other.gameObject.tag == "Ground") {
+		if (other.gameObject.tag == "Ground" || other.gameObject.tag == "SwitchHeavy") {
 			print ("Je suis grounded");
 			grounded = true;
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D other){
-		if (other.gameObject.tag == "Ground") {
+		if (other.gameObject.tag == "Ground"|| other.gameObject.tag == "SwitchHeavy") {
 			print ("Je suis pas grounded");
 			grounded = false;
 		}
