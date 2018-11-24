@@ -19,10 +19,12 @@ public class RotateMe : MonoBehaviour {
         if (move > 0)
         {
             transform.Rotate(Vector3.forward * -RotateSpeed);
+            print(Input.GetAxis("Mouse X"));
         }
         else if (move < 0)
         {
             transform.Rotate(Vector3.forward * RotateSpeed);
+            print(Input.GetAxis("Mouse X"));
         }
     }
 }
