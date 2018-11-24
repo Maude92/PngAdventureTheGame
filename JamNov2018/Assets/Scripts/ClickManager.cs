@@ -77,15 +77,19 @@ public class ClickManager : MonoBehaviour {
 				if (hit.collider.gameObject.tag == "Player") {
 					print ("Yassss");
 					if (changeplayer == 1 && groundedthescript1.grounded == true) { 
+						player2.transform.position = player1.transform.position;
 						changeplayer++;
 						nbVie--;
 					} else if (changeplayer == 2 && groundedthescript2.grounded == true) {
+						player3.transform.position = player2.transform.position;
 						changeplayer++;
 						nbVie--;
 					} else if (changeplayer == 3 && groundedthescript3.grounded == true) {
+						player4.transform.position = player3.transform.position;
 						changeplayer++;
 						nbVie--;
 					} else if (changeplayer == 4 && groundedthescript4.grounded == true) {
+						player1.transform.position = player4.transform.position;
 						changeplayer++;
 						nbVie--;
 					}
