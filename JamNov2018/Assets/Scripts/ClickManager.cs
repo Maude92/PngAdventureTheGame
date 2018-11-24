@@ -18,6 +18,11 @@ public class ClickManager : MonoBehaviour {
 	Rigidbody2D rb3;
 	Rigidbody2D rb4;
 
+	Animator animplayer1;
+	Animator animplayer2;
+	Animator animplayer3;
+	Animator animplayer4;
+
 	GroundedScript groundedthescript1;
 	GroundedScript groundedthescript2;
 	GroundedScript groundedthescript3;
@@ -58,6 +63,8 @@ public class ClickManager : MonoBehaviour {
 		groundedthescript2 = grounded2.GetComponent<GroundedScript> ();
 		groundedthescript3 = grounded3.GetComponent<GroundedScript> ();
 		groundedthescript4 = grounded4.GetComponent<GroundedScript> ();
+
+		animplayer1 = player1.GetComponent<Animator> ();
 	}
 
 	void Update () {
@@ -103,6 +110,7 @@ public class ClickManager : MonoBehaviour {
 						rb2.AddForce(new Vector2 (0, jumpforce));
 						rb3.AddForce(new Vector2 (0, jumpforce));
 						rb4.AddForce(new Vector2 (0, jumpforce));
+						animplayer1.SetBool ("Jump", true);
 					} else if (changeplayer == 2 && groundedthescript2.grounded == true) {
 						rb1.AddForce(new Vector2 (0, jumpforce));
 						rb2.AddForce(new Vector2 (0, jumpforce));
