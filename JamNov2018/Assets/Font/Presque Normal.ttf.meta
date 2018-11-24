@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b265ba091fe0cb24191bfa78b051112e
+timeCreated: 1543095500
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 300
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Presque Normal
+  fontNames:
+  - Presque Normal
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
