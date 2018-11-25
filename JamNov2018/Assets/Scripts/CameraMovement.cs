@@ -21,12 +21,12 @@ public class CameraMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        trackPlayer();
+    }
 
 
 	void LateUpdate(){
-		trackPlayer ();					// On appelle la méthode
+		//trackPlayer ();					// On appelle la méthode
 	}
 
 
