@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3c130f6196f65304e995a0eff89a7e48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TheGame.unity
     guid: 35ea2cd707192434abd1c17ad294ea07
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TheGame_Level1.unity
     guid: 30af61c5b1c9b2447919326404ff49d3
+  - enabled: 1
+    path: Assets/Scenes/TheGame_Level1(updateMaude).unity
+    guid: 446187a0249ab3046b7253d5bb570340
+  - enabled: 1
+    path: Assets/Scenes/TheGame_Level2(updateMaude).unity
+    guid: c3c3ec6ba82bbd5438fd9451693d1837

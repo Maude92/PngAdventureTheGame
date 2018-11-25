@@ -10,10 +10,14 @@ public class RotateMe : MonoBehaviour {
     private Vector3 lastPos;
     private bool gauche = false;
 
+	public bool jebouge;
+
 	// Use this for initialization
 	void Start () {
         rbSpiky = Spiky.GetComponent<Rigidbody2D>();
         lastPos = transform.position;
+
+		jebouge = false;
     }
 
     // Update is called once per frame
@@ -33,19 +37,19 @@ public class RotateMe : MonoBehaviour {
         }
 
 
-        if (gauche == false && lastPos != transform.position)
-        {
-            transform.Rotate(Vector3.forward * -RotateSpeed);
-            //print(Input.GetAxis("Mouse X"));
-            lastPos = transform.position;
-        }
-        else if (gauche == true && lastPos != transform.position)
-        {
-            transform.Rotate(Vector3.forward * RotateSpeed);
-            //print(Input.GetAxis("Mouse X"));
-            lastPos = transform.position;
+		if (gauche == false && lastPos != transform.position) {
+			transform.Rotate (Vector3.forward * -RotateSpeed);
+			//print(Input.GetAxis("Mouse X"));
+			lastPos = transform.position;
+			jebouge = true;
+		} else if (gauche == true && lastPos != transform.position) {
+			transform.Rotate (Vector3.forward * RotateSpeed);
+			//print(Input.GetAxis("Mouse X"));
+			lastPos = transform.position;
+			jebouge = true;
 
-        }
+		} else
+			jebouge = false;
         
     }
 }
