@@ -15,9 +15,12 @@ public class CameraMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;		// FindWithTag fonctionne aussi
+		//playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;		// FindWithTag fonctionne aussi
 	}
 
+	void FixedUpdate (){
+		playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;		// FindWithTag fonctionne aussi
+	}
 
 	// Update is called once per frame
 	void Update () {
