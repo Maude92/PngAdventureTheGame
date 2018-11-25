@@ -54,6 +54,7 @@ public class ClickManager : MonoBehaviour {
 	public GameObject particlesPlayer3;
 	public GameObject particlesPlayer4;
 
+	private AudioManager audioManager;
 
 	void Start (){
 		changeplayer = 1;
@@ -70,7 +71,12 @@ public class ClickManager : MonoBehaviour {
 		groundedthescript4 = grounded4.GetComponent<GroundedScript> ();
 
 		animplayer1 = player1.GetComponent<Animator> ();
+
+		audioManager = AudioManager.instance;
+		if (audioManager == null) {
+			Debug.LogError ("Attention, le AudioManager n'a pas été trouvé dans la scène.");}
 	}
+
 
 	void Update () {
 //		if (Input.GetMouseButtonDown(0)) {
@@ -92,22 +98,26 @@ public class ClickManager : MonoBehaviour {
 						player2.transform.position = player1.transform.position;
 						changeplayer++;
 						particlesPlayer2.SetActive (true);
-						nbVie--;
+						audioManager.PlaySound ("Transformation");
+						//nbVie--;
 					} else if (changeplayer == 2 && groundedthescript2.grounded == true) {
 						player3.transform.position = player2.transform.position;
 						changeplayer++;
-						nbVie--;
+						//nbVie--;
 						particlesPlayer3.SetActive (true);
+						audioManager.PlaySound ("Transformation");
 					} else if (changeplayer == 3 && groundedthescript3.grounded == true) {
 						player4.transform.position = player3.transform.position;
 						changeplayer++;
-						nbVie--;
+						//nbVie--;
 						particlesPlayer4.SetActive (true);
+						audioManager.PlaySound ("Transformation");
 					} else if (changeplayer == 4 && groundedthescript4.grounded == true) {
 						player1.transform.position = player4.transform.position;
 						changeplayer++;
-						nbVie--;
+						//nbVie--;
 						particlesPlayer1.SetActive (true);
+						audioManager.PlaySound ("Transformation");
 					}
 				} 
 
@@ -120,21 +130,25 @@ public class ClickManager : MonoBehaviour {
 						rb3.AddForce(new Vector2 (0, jumpforce));
 						rb4.AddForce(new Vector2 (0, jumpforce));
 						animplayer1.SetBool ("Jump", true);
+						audioManager.PlaySound ("Jump");
 					} else if (changeplayer == 2 && groundedthescript2.grounded == true) {
 						rb1.AddForce(new Vector2 (0, jumpforce));
 						rb2.AddForce(new Vector2 (0, jumpforce));
 						rb3.AddForce(new Vector2 (0, jumpforce));
 						rb4.AddForce(new Vector2 (0, jumpforce));
+						audioManager.PlaySound ("Jump");
 					} else if (changeplayer == 3 && groundedthescript3.grounded == true) {
 						rb1.AddForce(new Vector2 (0, jumpforce));
 						rb2.AddForce(new Vector2 (0, jumpforce));
 						rb3.AddForce(new Vector2 (0, jumpforce));
 						rb4.AddForce(new Vector2 (0, jumpforce));
+						audioManager.PlaySound ("Jump");
 					} else if (changeplayer == 4 && groundedthescript4.grounded == true) {
 						rb1.AddForce(new Vector2 (0, jumpforce));
 						rb2.AddForce(new Vector2 (0, jumpforce));
 						rb3.AddForce(new Vector2 (0, jumpforce));
 						rb4.AddForce(new Vector2 (0, jumpforce));
+						audioManager.PlaySound ("Jump");
 					}
 				}
 				//hit.collider.attachedRigidbody.AddForce(Vector2.up);
