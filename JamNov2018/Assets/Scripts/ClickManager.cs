@@ -173,7 +173,7 @@ public class ClickManager : MonoBehaviour {
 			player2.SetActive (false);
 			player3.SetActive (true);
 			player4.SetActive (false);
-			jumpforce = 100;
+			jumpforce = 100000;
 		} else if (changeplayer == 4) {
 			player1.SetActive (false);
 			player2.SetActive (false);
